@@ -1,0 +1,280 @@
+/dts-v1/;
+
+/ {
+	overlay-name = "Camera Dual IMX274";
+	jetson-header-name = "Jetson AGX Xavier CSI Connector";
+	compatible = "nvidia,p2822-0000+p2888-0001\0nvidia,e3900-0000+p2888-0004";
+
+	fragment@0 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@1 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+			badge = "imx274_bottom_A6V26";
+			position = "bottom";
+			orientation = [30 00];
+		};
+	};
+
+	fragment@2 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+			pcl_id = "v4l2_sensor";
+			devname = "imx274 30-001a";
+			proc-device-tree = "/proc/device-tree/i2c@3180000/tca9546@70/i2c@0/imx274_a@1a";
+		};
+	};
+
+	fragment@3 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+			pcl_id = "v4l2_lens";
+			proc-device-tree = "/proc/device-tree/lens_imx274@A6V26/";
+		};
+	};
+
+	fragment@4 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@5 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+			badge = "imx274_top_A6V26";
+			position = "top";
+			orientation = [30 00];
+		};
+	};
+
+	fragment@6 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+			pcl_id = "v4l2_sensor";
+			devname = "imx274 31-001a";
+			proc-device-tree = "/proc/device-tree/i2c@3180000/tca9546@70/i2c@1/imx274_c@1a";
+		};
+	};
+
+	fragment@7 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+			pcl_id = "v4l2_lens";
+			proc-device-tree = "/proc/device-tree/lens_imx274@A6V26/";
+		};
+	};
+
+	fragment@8 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			num-channels = <0x02>;
+		};
+	};
+
+	fragment@9 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@10 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@11 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+			port-index = <0x00>;
+			bus-width = <0x04>;
+			remote-endpoint = <0xffffffff>;
+		};
+	};
+
+	fragment@12 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+			port-index = <0x02>;
+			bus-width = <0x04>;
+			remote-endpoint = <0xffffffff>;
+		};
+	};
+
+	fragment@13 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			num-channels = <0x02>;
+		};
+	};
+
+	fragment@14 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@15 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@16 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+			port-index = <0x00>;
+			bus-width = <0x04>;
+			remote-endpoint = <0xffffffff>;
+		};
+	};
+
+	fragment@17 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@18 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@19 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@20 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@21 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+			port-index = <0x02>;
+			bus-width = <0x04>;
+			remote-endpoint = <0xffffffff>;
+		};
+	};
+
+	fragment@22 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@23 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@24 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			num_csi_lanes = <0x08>;
+			max_lane_speed = <0x16e360>;
+			min_bits_per_pixel = <0x0a>;
+			vi_peak_byte_per_pixel = <0x02>;
+			vi_bw_margin_pct = <0x19>;
+			isp_peak_byte_per_pixel = <0x05>;
+			isp_bw_margin_pct = <0x19>;
+		};
+	};
+
+	fragment@25 {
+		target = <0xffffffff>;
+
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	__fixups__ {
+		imx274_cam0 = "/fragment@0:target:0";
+		cam_module0 = "/fragment@1:target:0";
+		cam_module0_drivernode0 = "/fragment@2:target:0";
+		cam_module0_drivernode1 = "/fragment@3:target:0";
+		imx274_cam1 = "/fragment@4:target:0";
+		cam_module1 = "/fragment@5:target:0";
+		cam_module1_drivernode0 = "/fragment@6:target:0";
+		cam_module1_drivernode1 = "/fragment@7:target:0";
+		vi_base = "/fragment@8:target:0";
+		vi_port0 = "/fragment@9:target:0";
+		vi_port1 = "/fragment@10:target:0";
+		liimx274_vi_in0 = "/fragment@11:target:0";
+		liimx274_csi_out0 = "/fragment@11/__overlay__:remote-endpoint:0\0/fragment@18:target:0";
+		liimx274_vi_in1 = "/fragment@12:target:0";
+		liimx274_csi_out1 = "/fragment@12/__overlay__:remote-endpoint:0\0/fragment@23:target:0";
+		csi_base = "/fragment@13:target:0";
+		csi_chan0 = "/fragment@14:target:0";
+		csi_chan0_port0 = "/fragment@15:target:0";
+		liimx274_csi_in0 = "/fragment@16:target:0";
+		liimx274_imx274_out0 = "/fragment@16/__overlay__:remote-endpoint:0";
+		csi_chan0_port1 = "/fragment@17:target:0";
+		csi_chan1 = "/fragment@19:target:0";
+		csi_chan1_port0 = "/fragment@20:target:0";
+		liimx274_csi_in1 = "/fragment@21:target:0";
+		liimx274_imx274_out1 = "/fragment@21/__overlay__:remote-endpoint:0";
+		csi_chan1_port1 = "/fragment@22:target:0";
+		tcp = "/fragment@24:target:0";
+		tca9546_70 = "/fragment@25:target:0";
+	};
+};
