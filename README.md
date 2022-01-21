@@ -1,12 +1,21 @@
 # AGX-Xavier-Imx477
-Device overlay and driver for Imx477 (wip)
+Device overlay and driver for Imx477
 
-To-do
+**To-do**
 
-#######################
+- [ ] Create basic functioning overlay file.
+- [ ] Update overlay to include all 4 csi lanes.
+- [ ] Modify driver to make use of 4 csi lanes.
 
-Create basic functioning overlay file.
 
-Update overlay to include all 4 csi lanes.
+**Documentation Needed**
 
-Modify driver to make use of 4 csi lanes.
+- [x] Camera Adapter Datasheet
+- [x] Sony Imx477 Datasheet
+- [ ] Nvidia camera platform docs
+- [ ] Device tree overlay composition resources
+
+**Source Files Needed**
+
+- [x] Jetson Xavier NX/Nano Imx477 reference overlay
+- [x] AGX Xavier 
