@@ -15,7 +15,12 @@ Device overlay and driver for Imx477
 - [ ] Nvidia camera platform docs
 - [ ] Device tree overlay composition resources
 
-**Source Files Needed**
+**Files Needed**
 
 - [x] Jetson Xavier NX/Nano Imx477 reference overlay
-- [x] AGX Xavier 
+- [x] AGX Xavier Imx274 reference overlay
+
+
+**Tools Needed**
+
+- [x] Device Tree Compiler (DTC)
