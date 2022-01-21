@@ -13,6 +13,7 @@ Device overlay and driver for Imx477
 - [x] Camera Adapter Datasheet
 - [x] Sony Imx477 Datasheet
 - [ ] Nvidia camera platform docs
+- [ ] Nvarguscam docs
 - [ ] Device tree overlay composition resources
 
 **Files Needed**
